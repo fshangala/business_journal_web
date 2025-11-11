@@ -1,1 +1,12 @@
 {% extends "base.html" %}
+
+{% block content %}
+<div class="p-2 rounded flex justify-end items-center gap-2">
+    <div class="dropdown-menu">
+        <button class="dropdown-menu-button p-2 cursor-pointer"><span class="material-symbols-outlined pointer-events-none">menu</span></button>
+        <div class="dropdown-menu-content hidden absolute right-0 mr-2 p-4 rounded-lg shadow-lg bg-white dark:bg-gray-950">
+            <a href="">Add Business</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

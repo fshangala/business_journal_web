@@ -5,11 +5,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+        <link rel="favicon" type="image/png" href="{% static "images/journal-book.png" %}">
         <title>BusinessJournal {% block title %}{% endblock title %}</title>
     </head>
-    <body>
-        <header class="p-4 bg-primary-light text-black dark:bg-primary-dark dark:text-white"></header>
+    <body class="bg-gray-100 dark:bg-gray-900">
+        <header class="p-4 bg-primary-light text-black dark:bg-primary-dark dark:text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="{% static 'images/journal-book.png' %}" alt="logo" width="50" height="50">
+                        <span class="font-bold text-xl">Business Journal</span>
+                    </a>
+                </div>
+                <div></div>
+            </div>
+        </header>
         <main class="text-black dark:text-white">{% block content %}{% endblock content %}</main>
         <footer class="text-black dark:text-white text-center">2025 &copy; BusinessJournal. All rights reserved.</footer>
+        
+        <script src="{% static "js/main.js" %}"></script>
     </body>
 </html>
