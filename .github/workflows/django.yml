@@ -1,0 +1,24 @@
+name: Django CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: SSH Deploy
+      uses: kostyaten/ssh-server-deploy@v4
+      with:
+        host: ${secretes.SSH_HOST}
+        username: ${secretes.SSH_USERNAME}
+        password: ${secretes.SSH_PASSWORD}
+        scp_target: /secretes/business_journal
