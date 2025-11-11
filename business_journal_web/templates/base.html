@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+        <title>BusinessJournal {% block title %}{% endblock title %}</title>
+    </head>
+    <body>
+        <header class="p-4 bg-primary-light text-black dark:bg-primary-dark dark:text-white"></header>
+        <main class="text-black dark:text-white">{% block content %}{% endblock content %}</main>
+        <footer class="text-black dark:text-white text-center">2025 &copy; BusinessJournal. All rights reserved.</footer>
+    </body>
+</html>
