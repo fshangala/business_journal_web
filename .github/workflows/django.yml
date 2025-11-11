@@ -18,7 +18,7 @@ jobs:
     - name: SSH Deploy
       uses: kostyaten/ssh-server-deploy@v4
       with:
-        host: ${secretes.SSH_HOST}
-        username: ${secretes.SSH_USERNAME}
-        password: ${secretes.SSH_PASSWORD}
-        scp_target: /secretes/business_journal
+        host: ${{secrets.SSH_HOST}}
+        username: ${{secrets.SSH_USERNAME}}
+        password: ${{secrets.SSH_PASSWORD}}
+        scp_target: /secrets/business_journal
